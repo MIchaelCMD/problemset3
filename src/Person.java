@@ -7,6 +7,7 @@ public class Person {
     //constructors
     //example of method overloading??
     public Person(){
+
         this ("Unknown",0,'u');
     }
 
@@ -65,9 +66,4 @@ public class Person {
     public String toString() {
         return "Name: " +getName() +"\n" + "Age: " + getAge() +"\n" + "Gender: " + getGender()+ "\n";
     }
-
-
-
-
-
 }
