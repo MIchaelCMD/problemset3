@@ -1,10 +1,10 @@
 public class House {
 
-    String address, owner;
-
+    String address, owner, type;
+    double price;
 
     public House() {
 
-        this
+        this("No Address Specified",)
     }
 }
