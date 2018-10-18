@@ -35,8 +35,6 @@ public class Person {
         
     }
 
-
-
     //accessor methods
     public String getName() {
         return name;
