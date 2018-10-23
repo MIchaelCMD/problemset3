@@ -63,6 +63,6 @@ public class House {
 
     @Override
     public String toString() {
-        return getType() + ":\nOwner: " + getOwner() + "\nAddress: " + getAddress() + "\nPrice: " + getPrice();
+        return "Type: " + getType() + ":\nOwner: " + getOwner() + "\nAddress: " + getAddress() + "\nPrice: " + getPrice();
     }
 }

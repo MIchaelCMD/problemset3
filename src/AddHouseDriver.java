@@ -9,7 +9,6 @@ public class AddHouseDriver {
         NewHouse.setAddress(JOptionPane.showInputDialog("Enter Address for this house: \n"));
         NewHouse.setOwner(JOptionPane.showInputDialog("Enter the Owner's name for this house: \n"));
         NewHouse.setType(JOptionPane.showInputDialog("Enter Type of this house: \n"));
-       // NewHouse.setPrice(Double.parseDouble(JOptionPane.showInputDialog("Enter the price for this house: \n")));
 
         double priceBV = Double.parseDouble(JOptionPane.showInputDialog("Enter the price for this house: \n"));
 
@@ -19,7 +18,7 @@ public class AddHouseDriver {
         else
             NewHouse.setPrice(priceBV);
 
-        JOptionPane.showMessageDialog(null,NewHouse.toString());
+        JOptionPane.showMessageDialog(null,NewHouse.toString(),"Details for: " + NewHouse.getType(),JOptionPane.INFORMATION_MESSAGE);
     }
 }
 
