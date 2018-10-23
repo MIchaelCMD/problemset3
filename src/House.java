@@ -1,6 +1,6 @@
 public class House {
 
-    String address, owner, type;
+    String address,owner, type;
     double price;
 
     public House() {
@@ -12,7 +12,7 @@ public class House {
 
     }
 
-    public Book(String address, String owner, String type, double price) {
+    public House(String address, String owner, String type, double price) {
 
         this.address = address;
         this.owner = owner;
@@ -22,38 +22,47 @@ public class House {
     }
 
     public void setPrice(double price) {
+
         this.price = price;
     }
 
     public void setAddress(String address) {
+
         this.address = address;
     }
 
     public void setOwner(String owner) {
+
         this.owner = owner;
     }
 
     public void setType(String type) {
+
         this.type = type;
     }
 
     public String getAddress() {
+
         return address;
     }
 
     public String getOwner() {
+
         return owner;
     }
 
     public double getPrice() {
+
         return price;
     }
 
     public String getType() {
+
         return type;
     }
 
+    @Override
     public String toString() {
-        return " ";
+        return getType() + ":\nOwner: " + getOwner() + "\nAddress: " + getAddress() + "\nPrice: " + getPrice();
     }
 }
