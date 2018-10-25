@@ -33,7 +33,6 @@ public class BankingApplication {
 
 
  */
-
         savingsAccount =new SavingsAccount(new Person("John Reynolds",
                 "Mountain View"),1234,4500,2);
 
@@ -53,19 +52,19 @@ public class BankingApplication {
         bankaccounts.add(bankaccount);
 
         String answer="";
-        while(JOptionPane.showConfirmDialog(
-                null,"Are you finished?")==JOptionPane.NO_OPTION){
+        while(JOptionPane.showConfirmDialog(null,"Are you finished?")==JOptionPane.NO_OPTION){
 
             name= JOptionPane.showInputDialog("Enter Account Holder Name");
             address = JOptionPane.showInputDialog("Enter Account Holder Address");
             accNum =Integer.parseInt(JOptionPane.showInputDialog("Enter Account Number"));
             balance = Double.parseDouble(JOptionPane.showInputDialog("Enter balance"));
-            answer = JOptionPane.showInputDialog(("Savings Account(S) or Current Account(C)"));
-            if (answer.equals("S")) {
+            answer = JOptionPane.showInputDialog(("Savings Account(s) or Current Account(c)"));
+
+            if (answer.equals("s")) {
                 taxRate = Integer.parseInt(JOptionPane.showInputDialog("Enter tax rate"));
                 bankaccount = new SavingsAccount(new Person(name, address), accNum, balance, taxRate);
             }
-            else if(answer.equals("C")) {
+            else if(answer.equals("c")) {
                 checkBook = Boolean.parseBoolean(JOptionPane.showInputDialog("Do you want a check book"));
                 bankaccount = new CurrentAccount(new Person(name, address), accNum, balance, checkBook);
             }
