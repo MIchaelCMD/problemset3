@@ -2,13 +2,13 @@ public class Computer implements IDable {
 
    private String id;
    private String make;
-   protected int memory;
+   protected Memory memory;
 
-   public Computer(String id, String make, int memory)
+   public Computer(String id, String make, String type,int size)
    {
         this.id = id;
         this.make = make;
-        this.memory = memory;
+        this.memory = new Memory(type,size);
    }
 
     public String getId() {
@@ -27,11 +27,11 @@ public class Computer implements IDable {
         this.make = make;
     }
 
-    public int getMemory() {
+    public Memory getMemory() {
         return memory;
     }
 
-    public void setMemory(int memory) {
+    public void setMemory(Memory memory) {
         this.memory = memory;
     }
 

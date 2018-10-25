@@ -1,10 +1,10 @@
-public class Laptop extends Computer implements Memory {
+public class Laptop extends Computer{
 
     private boolean touchscreen;
 
-    public Laptop(Computer make,Computer id,boolean touchscreen)
+    public Laptop(String make,String id,boolean touchscreen,String type,int size)
     {
-        super();
+        super(id,make,type,size);
         setTouchscreen(touchscreen);
     }
 
