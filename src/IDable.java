@@ -1,6 +1,4 @@
 public interface IDable {
-   public void setID(String ID) {
-
-   }
+   public void setID(String ID);
 }
 
