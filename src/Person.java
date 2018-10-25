@@ -1,69 +1,38 @@
+/**
+ * Created by T00036644 on 31/10/2017.
+ */
 public class Person {
-
     private String name;
-    private int age;
-    private char gender;
+    private String address;
 
-    //constructors
-    //example of method overloading??
-    public Person(){
-
-        this ("Unknown",0,'u');
+    public Person() {
+        this("Unknown","Unknown");
     }
 
-
-    public Person(String n,int age,char g){
-        //setting attributes values directly)
-        this.name=n;
-        this.age=age;
-        this.gender=g;
-    }
-
-
-    public Person(String name){
-        //setting attributes values indirectly)
-        setName(name);
-        setAge(0);
-        setGender('u');
-    }
-
-    public Person(String name,int age){
-        //setting attributes values directly)
-        setName(name);
-        setAge(age);
-        setGender('u');
-        //this(name,age,'u');
-        
-    }
-
-    //accessor methods
-    public String getName() {
-        return name;
-    }
-
-    public int getAge() {
-        return age;
-    }
-
-    public char getGender() {
-        return gender;
-    }
-
-    //mutator methods
-    public void setName(String name) {
+    public Person(String name, String address) {
         this.name = name;
-    }
-
-    public void setAge(int age) {
-        this.age = age;
-    }
-
-    public void setGender(char gender) {
-        this.gender = gender;
+        this.address = address;
     }
 
     @Override
     public String toString() {
-        return "Name: " +getName() +"\n" + "Age: " + getAge() +"\n" + "Gender: " + getGender()+ "\n";
+        return "\nName: "+ name  +"\n" +
+                "Address: " + address;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
     }
 }
