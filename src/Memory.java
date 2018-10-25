@@ -3,10 +3,6 @@ public class Memory extends Computer {
     private String type;
     private int size;
 
-    @Override
-
-    }
-
     public String getType() {
         return type;
     }
@@ -28,4 +24,5 @@ public class Memory extends Computer {
                 "type='" + type + '\'' +
                 ", size=" + size +
                 '}';
+    }
 }

@@ -1,7 +1,15 @@
-public class Computer {
+public class Computer implements IDable {
 
-   private String id, make;
+   private String id;
+   private String make;
    protected int memory;
+
+   public Computer(String id, String make, int memory)
+   {
+        this.id = id;
+        this.make = make;
+        this.memory = memory;
+   }
 
     public String getId() {
         return id;
@@ -34,5 +42,11 @@ public class Computer {
                 ", make='" + make + '\'' +
                 ", memory=" + memory +
                 '}';
+    }
+
+
+    @Override
+    public void setID(String ID) {
+
     }
 }
