@@ -6,7 +6,12 @@ public class Person {
     private String address;
 
     public Person() {
-        this("Unknown","Unknown");
+
+        this("No Owner Specified","Unknown");
+    }
+
+    public Person(String name) {
+        this.name = name;
     }
 
     public Person(String name, String address) {
@@ -17,7 +22,7 @@ public class Person {
     @Override
     public String toString() {
         return "\nName: "+ name  +"\n" +
-                "Address: " + address;
+                "Address: " + address;   //Address is running twice in output for house (null then actual value)
     }
 
     public String getName() {

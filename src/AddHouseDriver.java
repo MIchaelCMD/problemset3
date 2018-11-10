@@ -10,7 +10,10 @@ public class AddHouseDriver {
         NewHouse.setOwner(JOptionPane.showInputDialog("Enter the Owner's name for this house: \n"));
         NewHouse.setType(JOptionPane.showInputDialog("Enter Type of this house: \n"));
 
-        double priceBV = Double.parseDouble(JOptionPane.showInputDialog("Enter the price for this house: \n"));
+        double priceBV;
+        do {
+            priceBV = Double.parseDouble(JOptionPane.showInputDialog("Enter the price for this house: \n"));
+        } while(priceBV < 0);       //do while to validate price for any negative volume
 
         if(priceBV < 0) {
             NewHouse.setPrice(NewHouse.getPrice());

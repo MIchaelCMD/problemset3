@@ -4,11 +4,14 @@ public class Laptop extends Computer{
 
     public Laptop(String make,String id,boolean touchscreen,String type,int size)
     {
+        //Constructor calls to super class Computer
         super(id,make,type,size);
         setTouchscreen(touchscreen);
+        this.touchscreen = touchscreen;
     }
 
     public boolean isTouchscreen() {
+
         return touchscreen;
     }
 

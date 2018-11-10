@@ -1,21 +1,22 @@
 public class House {
 
-    String address,owner, type;
-    double price;
+    private String address, type;
+    private double price;
+    private Person owner;
 
     public House() {
-
+        //blank constructor with default values
         price = 0.0;
-        address  = "No Address";
-        type = "No Type";
-        owner = "No Owner";
+        address  = "No Address Specified";
+        type = "No Type Specified";
+        owner = new Person();      //Creating instance of Person
 
     }
 
     public House(String address, String owner, String type, double price) {
 
         this.address = address;
-        this.owner = owner;
+        this.owner = new Person(owner);   //Creating instance of Person with a name owner
         this.type = type;
         this.price = price;
 
@@ -33,7 +34,7 @@ public class House {
 
     public void setOwner(String owner) {
 
-        this.owner = owner;
+        this.owner = new Person(owner);
     }
 
     public void setType(String type) {
@@ -46,9 +47,9 @@ public class House {
         return address;
     }
 
-    public String getOwner() {
+    public Person getOwner() {
 
-        return owner;
+        return owner; //returning Person
     }
 
     public double getPrice() {
